@@ -17,7 +17,7 @@ import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # API Key 보안을 위한 코드
-os.eviron['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 # cache_resource로 한번 실행한 결과 캐싱해두기
 @st.cache_resource
